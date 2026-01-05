@@ -397,7 +397,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 value={course.title}
                 onChange={(e) => setCourse({ ...course, title: e.target.value })}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                placeholder="Ej: Introducción a la Teología del Cuerpo"
+                placeholder="Ej: Introducción a Webtrack"
               />
             </div>
 
