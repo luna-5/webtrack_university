@@ -23,13 +23,13 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
                 onClick={onSignUp}
                 className="px-6 py-2 text-sm font-bold text-white bg-black rounded-lg hover:bg-slate-800 transition-colors"
               >
-                Start Free Trial
+                Prueba Gratuita
               </button>
               <button
                 onClick={onGetStarted}
                 className="px-4 py-2 text-sm font-medium text-slate-900 hover:text-slate-700 transition-colors"
               >
-                Sign In
+                Iniciar Sesión
               </button>
             </div>
           </div>
@@ -41,18 +41,18 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-bold text-slate-900 mb-6">
-                Complete Fleet Management Solutions
+                Soluciones Completas de Gestión de Flotas
               </h1>
               <p className="text-xl text-slate-600 mb-8">
-                Track, manage, and optimize your entire fleet in real-time. WebTrack GPS provides
-                transport companies with powerful tools to monitor vehicles, reduce costs, and
-                improve operational efficiency.
+                Rastrea, gestiona y optimiza toda tu flota en tiempo real. WebTrack GPS proporciona
+                a las empresas de transporte herramientas poderosas para monitorear vehículos, reducir costos
+                y mejorar la eficiencia operativa.
               </p>
               <button
                 onClick={onSignUp}
                 className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-black rounded-lg hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl"
               >
-                Get Started Today
+                Comienza Hoy
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </div>
@@ -68,8 +68,8 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose WebTrack GPS?</h2>
-            <p className="text-xl text-slate-600">Powerful features designed for modern transport companies</p>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">¿Por Qué Elegir WebTrack GPS?</h2>
+            <p className="text-xl text-slate-600">Funcionalidades poderosas diseñadas para empresas de transporte modernas</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -77,10 +77,10 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
                 <MapPin className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Real-Time Tracking</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Rastreo en Tiempo Real</h3>
               <p className="text-slate-600">
-                Monitor your entire fleet in real-time with accurate GPS tracking. Know exactly
-                where each vehicle is at any moment.
+                Monitorea toda tu flota en tiempo real con rastreo GPS preciso. Sabe exactamente
+                dónde está cada vehículo en cualquier momento.
               </p>
             </div>
 
@@ -88,10 +88,10 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
                 <BarChart3 className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Advanced Analytics</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Analítica Avanzada</h3>
               <p className="text-slate-600">
-                Get detailed reports and insights on fuel consumption, driver behavior,
-                route optimization, and more.
+                Obtén reportes detallados e información sobre consumo de combustible, comportamiento del conductor,
+                optimización de rutas y más.
               </p>
             </div>
 
@@ -99,10 +99,10 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
                 <Shield className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Enhanced Security</h3>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Seguridad Mejorada</h3>
               <p className="text-slate-600">
-                Protect your assets with geofencing, alerts, and comprehensive security
-                features to prevent theft and misuse.
+                Protege tus activos con geocercas, alertas y funciones de seguridad completas
+                para prevenir robos y mal uso.
               </p>
             </div>
           </div>
@@ -116,23 +116,23 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               <Clock className="w-full h-64 text-slate-700" />
             </div>
             <div>
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Optimize Your Operations</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Optimiza tus Operaciones</h2>
               <p className="text-xl text-slate-600 mb-6">
-                Save time and reduce costs with intelligent route planning, automated reporting,
-                and maintenance scheduling.
+                Ahorra tiempo y reduce costos con planificación inteligente de rutas, reportes automatizados
+                y programación de mantenimiento.
               </p>
               <ul className="space-y-4 text-lg text-slate-600">
                 <li className="flex items-start">
                   <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
-                  <span>Reduce fuel costs by up to 30%</span>
+                  <span>Reduce costos de combustible hasta un 30%</span>
                 </li>
                 <li className="flex items-start">
                   <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
-                  <span>Improve driver safety and accountability</span>
+                  <span>Mejora la seguridad y responsabilidad del conductor</span>
                 </li>
                 <li className="flex items-start">
                   <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
-                  <span>Increase customer satisfaction with accurate ETAs</span>
+                  <span>Aumenta la satisfacción del cliente con tiempos estimados precisos</span>
                 </li>
               </ul>
             </div>
@@ -142,16 +142,16 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
 
       <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6">Ready to Transform Your Fleet?</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">¿Listo para Transformar tu Flota?</h2>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            Join hundreds of transport companies using WebTrack GPS to streamline operations
-            and maximize efficiency.
+            Únete a cientos de empresas de transporte que usan WebTrack GPS para optimizar operaciones
+            y maximizar la eficiencia.
           </p>
           <button
             onClick={onSignUp}
             className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-black rounded-lg hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl"
           >
-            Start Your Free Trial
+            Inicia tu Prueba Gratuita
             <ArrowRight className="ml-2 w-5 h-5" />
           </button>
         </div>
@@ -167,7 +167,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
             />
           </div>
           <p className="text-slate-400">
-            Professional fleet management solutions for transport companies
+            Soluciones profesionales de gestión de flotas para empresas de transporte
           </p>
         </div>
       </footer>
