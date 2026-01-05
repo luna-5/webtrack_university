@@ -214,9 +214,4 @@ CREATE POLICY "Users can update own lesson progress"
     )
   );
 
--- Insert sample courses
-INSERT INTO courses (title, description, instructor, duration, level, image_url) VALUES
-('Introduction to Theology of the Body', 'Discover the foundational teachings of Saint John Paul II on human dignity, love, and the meaning of the body.', 'Dr. Maria Santos', '6 weeks', 'beginner', 'https://polishheritagecentertx.org/sites/default/files/styles/max_1300x1300/public/2021-03/00870_AOSTA1991.jpg?itok=9vt-Auu3'),
-('The Nuptial Meaning of the Body', 'Explore the profound connection between human sexuality, marriage, and divine love.', 'Fr. Michael Thompson', '8 weeks', 'intermediate', 'https://polishheritagecentertx.org/sites/default/files/styles/max_1300x1300/public/2021-03/00870_AOSTA1991.jpg?itok=9vt-Auu3'),
-('Freedom and Gift in Human Love', 'Deep dive into the concepts of self-gift, freedom, and authentic love in relationships.', 'Dr. Sarah Chen', '10 weeks', 'advanced', 'https://polishheritagecentertx.org/sites/default/files/styles/max_1300x1300/public/2021-03/00870_AOSTA1991.jpg?itok=9vt-Auu3')
-ON CONFLICT DO NOTHING;
+-- Sample courses removed - courses will be created by administrators through the UI
