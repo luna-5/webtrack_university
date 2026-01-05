@@ -87,7 +87,7 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
     return (
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando equipos...</p>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
         <div className="absolute top-4 right-4">
           <button
             onClick={() => signOut()}
-            className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-rose-600 bg-white rounded-lg shadow-md hover:shadow-lg transition-all"
+            className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 bg-white rounded-lg shadow-md hover:shadow-lg transition-all"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar Sesión</span>
@@ -110,7 +110,7 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
             <img
-              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/8c104b01-51bf-49d3-a6ea-ee71a69358ae/other/1763877410260-ekarr7.png"
+              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
               alt="Logo"
               className="h-20 w-auto"
             />
@@ -126,7 +126,7 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-slate-900 mb-2 flex items-center">
-              <Users className="w-7 h-7 mr-2 text-rose-600" />
+              <Users className="w-7 h-7 mr-2 text-blue-600" />
               Equipos Disponibles
             </h2>
             <p className="text-slate-600">
@@ -141,13 +141,13 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
                 onClick={() => setSelectedTeamId(team.id)}
                 className={`relative p-6 rounded-xl border-2 cursor-pointer transition-all ${
                   selectedTeamId === team.id
-                    ? 'border-rose-600 bg-rose-50 shadow-lg'
+                    ? 'border-blue-600 bg-blue-50 shadow-lg'
                     : 'border-slate-200 hover:border-slate-300 hover:shadow-md'
                 }`}
               >
                 {selectedTeamId === team.id && (
                   <div className="absolute top-4 right-4">
-                    <CheckCircle className="w-6 h-6 text-rose-600" />
+                    <CheckCircle className="w-6 h-6 text-blue-600" />
                   </div>
                 )}
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{team.name}</h3>
@@ -168,7 +168,7 @@ export default function TeamSelection({ userId, onTeamSelected }: TeamSelectionP
             <button
               onClick={handleSubmit}
               disabled={!selectedTeamId || submitting}
-              className="w-full py-4 bg-rose-600 text-white font-bold text-lg rounded-lg hover:bg-rose-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed flex items-center justify-center"
+              className="w-full py-4 bg-blue-600 text-white font-bold text-lg rounded-lg hover:bg-blue-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed flex items-center justify-center"
             >
               {submitting ? (
                 <>

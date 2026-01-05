@@ -277,7 +277,7 @@ export default function InlineCourseManagement() {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando cursos...</p>
         </div>
       </div>
@@ -294,7 +294,7 @@ export default function InlineCourseManagement() {
         {userRole === 'system_user' && (
           <button
             onClick={handleCreateCourse}
-            className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             <Plus className="w-5 h-5 mr-2" />
             Crear Nuevo Curso
@@ -313,7 +313,7 @@ export default function InlineCourseManagement() {
                   onClick={() => setSelectedTeam(team)}
                   className={`p-3 rounded-lg cursor-pointer transition-colors ${
                     selectedTeam?.id === team.id
-                      ? 'bg-rose-50 border-2 border-rose-600'
+                      ? 'bg-blue-50 border-2 border-blue-600'
                       : 'bg-slate-50 hover:bg-slate-100'
                   }`}
                 >
@@ -334,7 +334,7 @@ export default function InlineCourseManagement() {
                 </h3>
                 <button
                   onClick={() => setShowAddCourse(true)}
-                  className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+                  className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   <Plus className="w-5 h-5 mr-2" />
                   Asignar Curso
@@ -457,7 +457,7 @@ export default function InlineCourseManagement() {
                 <select
                   value={selectedCourseId}
                   onChange={(e) => setSelectedCourseId(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 >
                   <option value="">Selecciona un curso...</option>
                   {getAvailableCourses().map((course) => (
@@ -480,7 +480,7 @@ export default function InlineCourseManagement() {
                 <button
                   onClick={handleAddCourse}
                   disabled={!selectedCourseId}
-                  className="flex-1 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
+                  className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
                 >
                   Asignar
                 </button>

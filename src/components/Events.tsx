@@ -436,7 +436,7 @@ export default function Events() {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando eventos...</p>
         </div>
       </div>
@@ -458,7 +458,7 @@ export default function Events() {
                 resetForm();
                 setShowEventForm(true);
               }}
-              className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Plus className="w-5 h-5 mr-2" />
               Crear Evento
@@ -537,17 +537,17 @@ export default function Events() {
 
                 <div className="space-y-2 text-sm text-slate-600 mb-4">
                   <div className="flex items-start">
-                    <Clock className="w-4 h-4 mr-2 mt-0.5 text-rose-600 flex-shrink-0" />
+                    <Clock className="w-4 h-4 mr-2 mt-0.5 text-blue-600 flex-shrink-0" />
                     <span className="capitalize">{formatDateTimeRange(event.event_date, event.end_date)}</span>
                   </div>
                   {event.location && (
                     <div className="flex items-center">
-                      <MapPin className="w-4 h-4 mr-2 text-rose-600" />
+                      <MapPin className="w-4 h-4 mr-2 text-blue-600" />
                       <span>{event.location}</span>
                     </div>
                   )}
                   <div className="flex items-center">
-                    <DollarSign className="w-4 h-4 mr-2 text-rose-600" />
+                    <DollarSign className="w-4 h-4 mr-2 text-blue-600" />
                     <span className="font-semibold">
                       {event.is_free ? (
                         <span className="text-green-600">Gratis</span>
@@ -638,7 +638,7 @@ export default function Events() {
                   type="text"
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Ej: Reunión mensual del equipo"
                   required
                 />
@@ -651,7 +651,7 @@ export default function Events() {
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Describe el evento..."
                   rows={4}
                 />
@@ -667,7 +667,7 @@ export default function Events() {
                     value={formData.event_date}
                     onChange={(e) => handleStartDateChange(e.target.value)}
                     step="1800"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                     required
                   />
                 </div>
@@ -681,7 +681,7 @@ export default function Events() {
                     value={formData.end_date}
                     onChange={(e) => handleEndDateChange(e.target.value)}
                     step="1800"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   />
                 </div>
               </div>
@@ -694,7 +694,7 @@ export default function Events() {
                   type="text"
                   value={formData.location}
                   onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Ej: Sala de conferencias"
                 />
               </div>
@@ -710,7 +710,7 @@ export default function Events() {
                         type="radio"
                         checked={formData.is_free}
                         onChange={() => setFormData({ ...formData, is_free: true })}
-                        className="w-4 h-4 text-rose-600 focus:ring-rose-500"
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
                       />
                       <span className="ml-2 text-slate-700">Evento Gratuito</span>
                     </label>
@@ -719,7 +719,7 @@ export default function Events() {
                         type="radio"
                         checked={!formData.is_free}
                         onChange={() => setFormData({ ...formData, is_free: false })}
-                        className="w-4 h-4 text-rose-600 focus:ring-rose-500"
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
                       />
                       <span className="ml-2 text-slate-700">Evento de Pago</span>
                     </label>
@@ -731,7 +731,7 @@ export default function Events() {
                         <select
                           value={formData.currency}
                           onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                         >
                           <option value="GTQ">GTQ</option>
                           <option value="USD">USD</option>
@@ -746,7 +746,7 @@ export default function Events() {
                           min="0"
                           value={formData.price}
                           onChange={(e) => setFormData({ ...formData, price: e.target.value })}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                           placeholder="0.00"
                         />
                       </div>
@@ -763,7 +763,7 @@ export default function Events() {
                   <select
                     value={formData.team_id}
                     onChange={(e) => setFormData({ ...formData, team_id: e.target.value })}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                     required
                   >
                     <option value="">Seleccionar equipo...</option>
@@ -791,7 +791,7 @@ export default function Events() {
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="w-full h-40 border-2 border-dashed border-slate-300 rounded-lg flex flex-col items-center justify-center hover:border-rose-400 hover:bg-rose-50 transition-colors cursor-pointer"
+                    className="w-full h-40 border-2 border-dashed border-slate-300 rounded-lg flex flex-col items-center justify-center hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
                   >
                     <Upload className="w-10 h-10 text-slate-400 mb-2" />
                     <span className="text-slate-600 font-medium">Haz clic para subir una imagen</span>
@@ -826,7 +826,7 @@ export default function Events() {
                 )}
                 {uploadingImage && (
                   <div className="mt-2 flex items-center text-sm text-slate-600">
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-rose-600 mr-2"></div>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
                     Subiendo imagen...
                   </div>
                 )}
@@ -843,7 +843,7 @@ export default function Events() {
                       type="url"
                       value={formData.facebook_url}
                       onChange={(e) => setFormData({ ...formData, facebook_url: e.target.value })}
-                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                       placeholder="https://facebook.com/..."
                     />
                   </div>
@@ -853,7 +853,7 @@ export default function Events() {
                       type="url"
                       value={formData.instagram_url}
                       onChange={(e) => setFormData({ ...formData, instagram_url: e.target.value })}
-                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                       placeholder="https://instagram.com/..."
                     />
                   </div>
@@ -863,7 +863,7 @@ export default function Events() {
                       type="url"
                       value={formData.twitter_url}
                       onChange={(e) => setFormData({ ...formData, twitter_url: e.target.value })}
-                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                       placeholder="https://twitter.com/... o https://x.com/..."
                     />
                   </div>
@@ -873,7 +873,7 @@ export default function Events() {
                       type="url"
                       value={formData.whatsapp_url}
                       onChange={(e) => setFormData({ ...formData, whatsapp_url: e.target.value })}
-                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                       placeholder="https://wa.me/..."
                     />
                   </div>
@@ -883,7 +883,7 @@ export default function Events() {
                       type="url"
                       value={formData.other_url}
                       onChange={(e) => setFormData({ ...formData, other_url: e.target.value })}
-                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                      className="flex-1 px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                       placeholder="Otro enlace relevante..."
                     />
                   </div>
@@ -904,7 +904,7 @@ export default function Events() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                  className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   {editingEvent ? 'Actualizar' : 'Crear'} Evento
                 </button>

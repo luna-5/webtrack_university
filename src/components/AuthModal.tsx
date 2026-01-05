@@ -55,7 +55,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
         <div className="p-8">
           <div className="flex items-center justify-center mb-6">
             <img
-              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/8c104b01-51bf-49d3-a6ea-ee71a69358ae/other/1763877410260-ekarr7.png"
+              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
               alt="Logo"
               className="h-16 w-auto"
             />
@@ -86,7 +86,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                   placeholder="Juan Pérez"
                   required
                 />
@@ -101,7 +101,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                 placeholder="tu@ejemplo.com"
                 required
               />
@@ -115,7 +115,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
                 placeholder="••••••••"
                 required
                 minLength={6}
@@ -125,7 +125,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Espera por favor...' : isSignUp ? 'Registrarse' : 'Iniciar Sesión'}
             </button>
@@ -137,7 +137,7 @@ export default function AuthModal({ onClose, initialMode = 'signin' }: AuthModal
                 setIsSignUp(!isSignUp);
                 setError('');
               }}
-              className="text-rose-600 hover:text-rose-700 font-medium transition-colors"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
             >
               {isSignUp
                 ? '¿Ya tienes una cuenta? Inicia Sesión'

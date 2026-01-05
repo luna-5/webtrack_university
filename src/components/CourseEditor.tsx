@@ -349,7 +349,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
     return (
       <div className="flex items-center justify-center py-12">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando curso...</p>
         </div>
       </div>
@@ -380,7 +380,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
             <button
               onClick={handleSaveCourse}
               disabled={saving}
-              className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors disabled:bg-slate-400"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-slate-400"
             >
               <Save className="w-5 h-5 mr-2" />
               {saving ? 'Guardando...' : 'Guardar Curso'}
@@ -396,7 +396,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 type="text"
                 value={course.title}
                 onChange={(e) => setCourse({ ...course, title: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 placeholder="Ej: Introducción a la Teología del Cuerpo"
               />
             </div>
@@ -408,7 +408,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
               <textarea
                 value={course.description}
                 onChange={(e) => setCourse({ ...course, description: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 placeholder="Describe brevemente de qué trata el curso"
                 rows={3}
               />
@@ -422,7 +422,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 type="text"
                 value={course.instructor}
                 onChange={(e) => setCourse({ ...course, instructor: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 placeholder="Ej: Dr. María Santos"
               />
             </div>
@@ -435,7 +435,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 type="text"
                 value={course.duration}
                 onChange={(e) => setCourse({ ...course, duration: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 placeholder="Ej: 8 semanas"
               />
             </div>
@@ -447,7 +447,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
               <select
                 value={course.level}
                 onChange={(e) => setCourse({ ...course, level: e.target.value })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
               >
                 <option value="beginner">Principiante</option>
                 <option value="intermediate">Intermedio</option>
@@ -462,7 +462,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
               <select
                 value={course.is_public ? 'public' : 'private'}
                 onChange={(e) => setCourse({ ...course, is_public: e.target.value === 'public' })}
-                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
               >
                 <option value="public">Público</option>
                 <option value="private">Privado (Solo equipos asignados)</option>
@@ -477,7 +477,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 <select
                   value={selectedTeamId}
                   onChange={(e) => setSelectedTeamId(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 >
                   <option value="">Seleccionar equipo...</option>
                   {teams.map((team) => (
@@ -507,7 +507,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 <button
                   type="button"
                   onClick={() => fileInputRef.current?.click()}
-                  className="w-full h-48 border-2 border-dashed border-slate-300 rounded-lg flex flex-col items-center justify-center hover:border-rose-400 hover:bg-rose-50 transition-colors cursor-pointer"
+                  className="w-full h-48 border-2 border-dashed border-slate-300 rounded-lg flex flex-col items-center justify-center hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
                 >
                   <Upload className="w-12 h-12 text-slate-400 mb-3" />
                   <span className="text-slate-600 font-medium">Haz clic para subir una imagen</span>
@@ -542,7 +542,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
               )}
               {uploadingImage && (
                 <div className="mt-2 flex items-center text-sm text-slate-600">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-rose-600 mr-2"></div>
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
                   Subiendo imagen...
                 </div>
               )}
@@ -557,7 +557,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
               <h2 className="text-2xl font-bold text-slate-900">Lecciones</h2>
               <button
                 onClick={handleAddLesson}
-                className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+                className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Plus className="w-5 h-5 mr-2" />
                 Agregar Lección
@@ -623,7 +623,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                   type="text"
                   value={editingLesson.title}
                   onChange={(e) => setEditingLesson({ ...editingLesson, title: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Ej: Introducción al tema"
                 />
               </div>
@@ -635,7 +635,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 <textarea
                   value={editingLesson.content}
                   onChange={(e) => setEditingLesson({ ...editingLesson, content: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Describe el contenido de la lección"
                   rows={4}
                 />
@@ -648,7 +648,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 <textarea
                   value={editingLesson.video_url}
                   onChange={(e) => setEditingLesson({ ...editingLesson, video_url: e.target.value })}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder='Ej: https://youtube.com/watch?v=... o <iframe src="..."></iframe>'
                   rows={3}
                 />
@@ -666,7 +666,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                     type="number"
                     value={editingLesson.duration_minutes}
                     onChange={(e) => setEditingLesson({ ...editingLesson, duration_minutes: parseInt(e.target.value) || 0 })}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                     placeholder="30"
                   />
                 </div>
@@ -679,7 +679,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                     type="number"
                     value={editingLesson.order_index}
                     onChange={(e) => setEditingLesson({ ...editingLesson, order_index: parseInt(e.target.value) || 0 })}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                     placeholder="0"
                   />
                 </div>
@@ -697,7 +697,7 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                 </button>
                 <button
                   onClick={handleSaveLesson}
-                  className="flex-1 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                  className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Guardar Lección
                 </button>

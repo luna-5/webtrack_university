@@ -236,7 +236,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando equipos...</p>
         </div>
       </div>
@@ -266,7 +266,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
           {userRole === 'system_user' && (
             <button
               onClick={() => setShowAddTeam(true)}
-              className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <Plus className="w-5 h-5 mr-2" />
               Nuevo Equipo
@@ -284,7 +284,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                     key={team.id}
                     className={`flex justify-between items-center p-3 rounded-lg cursor-pointer transition-colors ${
                       selectedTeam?.id === team.id
-                        ? 'bg-rose-50 border-2 border-rose-600'
+                        ? 'bg-blue-50 border-2 border-blue-600'
                         : 'bg-slate-50 hover:bg-slate-100'
                     }`}
                   >
@@ -312,7 +312,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                 <div className="bg-white rounded-xl shadow-md p-6">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-slate-900 flex items-center">
-                      <Lock className="w-5 h-5 mr-2 text-rose-600" />
+                      <Lock className="w-5 h-5 mr-2 text-blue-600" />
                       Contraseña del Equipo
                     </h3>
                     {!editingPassword && (
@@ -321,7 +321,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                           setEditingPassword(true);
                           setEditPasswordValue(selectedTeam.password || '');
                         }}
-                        className="text-sm text-rose-600 hover:text-rose-700 font-medium"
+                        className="text-sm text-blue-600 hover:text-blue-700 font-medium"
                       >
                         Cambiar
                       </button>
@@ -334,7 +334,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                         type="text"
                         value={editPasswordValue}
                         onChange={(e) => setEditPasswordValue(e.target.value)}
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                         placeholder="Nueva contraseña del equipo"
                       />
                       <div className="flex space-x-2">
@@ -349,7 +349,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                         </button>
                         <button
                           onClick={handleUpdatePassword}
-                          className="px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+                          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                         >
                           Guardar
                         </button>
@@ -392,7 +392,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                     </h3>
                     <button
                       onClick={() => setShowAddMember(true)}
-                      className="flex items-center px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors"
+                      className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       <UserPlus className="w-5 h-5 mr-2" />
                       Agregar Miembro
@@ -466,7 +466,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                   type="text"
                   value={newTeamName}
                   onChange={(e) => setNewTeamName(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Nombre"
                 />
               </div>
@@ -477,7 +477,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                 <textarea
                   value={newTeamDescription}
                   onChange={(e) => setNewTeamDescription(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Descripción del equipo"
                   rows={3}
                 />
@@ -490,7 +490,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                   type="text"
                   value={newTeamPassword}
                   onChange={(e) => setNewTeamPassword(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="Contraseña para que miembros se unan"
                 />
                 <p className="text-sm text-slate-500 mt-1">
@@ -511,7 +511,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                 </button>
                 <button
                   onClick={handleCreateTeam}
-                  className="flex-1 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                  className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Crear
                 </button>
@@ -534,7 +534,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                   type="email"
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                   placeholder="usuario@ejemplo.com"
                 />
               </div>
@@ -545,7 +545,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                 <select
                   value={newMemberRole}
                   onChange={(e) => setNewMemberRole(e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent outline-none"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
                 >
                   <option value="member">Miembro</option>
                   <option value="team_leader">Líder de Equipo</option>
@@ -563,7 +563,7 @@ export default function TeamManagement({ onBack }: TeamManagementProps) {
                 </button>
                 <button
                   onClick={handleAddMember}
-                  className="flex-1 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                  className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Agregar
                 </button>

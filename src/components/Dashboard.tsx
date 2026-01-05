@@ -163,7 +163,7 @@ export default function Dashboard() {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando tus cursos...</p>
         </div>
       </div>
@@ -195,7 +195,7 @@ export default function Dashboard() {
         {/* Logo */}
         <div className="p-4 border-b border-slate-200">
           <img
-            src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/8c104b01-51bf-49d3-a6ea-ee71a69358ae/other/1763877410260-ekarr7.png"
+            src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
             alt="Logo"
             className="h-12 w-auto"
           />
@@ -238,8 +238,8 @@ export default function Dashboard() {
                 onClick={() => setCurrentView('dashboard')}
                 className={`w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   currentView === 'dashboard'
-                    ? 'bg-rose-50 text-rose-600'
-                    : 'text-slate-700 hover:bg-rose-50 hover:text-rose-600'
+                    ? 'bg-blue-50 text-blue-600'
+                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
                 <Home className="w-5 h-5" />
@@ -251,8 +251,8 @@ export default function Dashboard() {
                 onClick={() => setCurrentView('events')}
                 className={`w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                   currentView === 'events'
-                    ? 'bg-rose-50 text-rose-600'
-                    : 'text-slate-700 hover:bg-rose-50 hover:text-rose-600'
+                    ? 'bg-blue-50 text-blue-600'
+                    : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
                 <Calendar className="w-5 h-5" />
@@ -266,8 +266,8 @@ export default function Dashboard() {
                     onClick={() => setCurrentView('courses')}
                     className={`w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                       currentView === 'courses'
-                        ? 'bg-rose-50 text-rose-600'
-                        : 'text-slate-700 hover:bg-rose-50 hover:text-rose-600'
+                        ? 'bg-blue-50 text-blue-600'
+                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                     }`}
                   >
                     <BookOpen className="w-5 h-5" />
@@ -279,8 +279,8 @@ export default function Dashboard() {
                     onClick={() => setCurrentView('teams')}
                     className={`w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium rounded-lg transition-colors ${
                       currentView === 'teams'
-                        ? 'bg-rose-50 text-rose-600'
-                        : 'text-slate-700 hover:bg-rose-50 hover:text-rose-600'
+                        ? 'bg-blue-50 text-blue-600'
+                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-600'
                     }`}
                   >
                     <Users className="w-5 h-5" />
@@ -296,7 +296,7 @@ export default function Dashboard() {
         <div className="p-4 border-t border-slate-200">
           <button
             onClick={() => signOut()}
-            className="w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium text-slate-700 hover:bg-rose-50 hover:text-rose-600 rounded-lg transition-colors"
+            className="w-full flex items-center space-x-3 px-4 py-3 text-sm font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors"
           >
             <LogOut className="w-5 h-5" />
             <span>Cerrar Sesión</span>
@@ -318,7 +318,7 @@ export default function Dashboard() {
             {enrolledCourses.length > 0 && (
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-              <GraduationCap className="w-7 h-7 mr-2 text-rose-600" />
+              <GraduationCap className="w-7 h-7 mr-2 text-blue-600" />
               Mis Cursos Inscritos
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -362,14 +362,14 @@ export default function Dashboard() {
                       </div>
                       <div className="w-full bg-slate-200 rounded-full h-2">
                         <div
-                          className="bg-rose-600 h-2 rounded-full transition-all"
+                          className="bg-blue-600 h-2 rounded-full transition-all"
                           style={{ width: `${getProgress(course.id)}%` }}
                         ></div>
                       </div>
                     </div>
                     <button
                       onClick={() => handleContinueLearning(course.id)}
-                      className="w-full py-2 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                      className="w-full py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       Continuar Aprendiendo
                     </button>
@@ -383,7 +383,7 @@ export default function Dashboard() {
         {publicCourses.length > 0 && (
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-              <BookOpen className="w-7 h-7 mr-2 text-rose-600" />
+              <BookOpen className="w-7 h-7 mr-2 text-blue-600" />
               Cursos Públicos
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -422,7 +422,7 @@ export default function Dashboard() {
                     </p>
                     <button
                       onClick={() => handleEnroll(course.id)}
-                      className="w-full py-2 bg-white text-rose-600 font-medium rounded-lg border-2 border-rose-600 hover:bg-rose-50 transition-colors"
+                      className="w-full py-2 bg-white text-blue-600 font-medium rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
                     >
                       Inscribirse Ahora
                     </button>
@@ -436,7 +436,7 @@ export default function Dashboard() {
         {privateCourses.length > 0 && (
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
-              <Users className="w-7 h-7 mr-2 text-rose-600" />
+              <Users className="w-7 h-7 mr-2 text-blue-600" />
               Cursos de Equipo
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -480,7 +480,7 @@ export default function Dashboard() {
                     </p>
                     <button
                       onClick={() => handleEnroll(course.id)}
-                      className="w-full py-2 bg-white text-rose-600 font-medium rounded-lg border-2 border-rose-600 hover:bg-rose-50 transition-colors"
+                      className="w-full py-2 bg-white text-blue-600 font-medium rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors"
                     >
                       Inscribirse Ahora
                     </button>

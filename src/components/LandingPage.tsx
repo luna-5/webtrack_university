@@ -21,7 +21,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
             <div className="flex items-center space-x-4">
               <button
                 onClick={onSignUp}
-                className="px-6 py-2 text-sm font-bold text-white bg-black rounded-lg hover:bg-slate-800 transition-colors"
+                className="px-6 py-2 text-sm font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Prueba Gratuita
               </button>
@@ -50,7 +50,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               </p>
               <button
                 onClick={onSignUp}
-                className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-black rounded-lg hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Comienza Hoy
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -75,7 +75,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <MapPin className="w-8 h-8 text-black" />
+                <MapPin className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Rastreo en Tiempo Real</h3>
               <p className="text-slate-600">
@@ -86,7 +86,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
 
             <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <BarChart3 className="w-8 h-8 text-black" />
+                <BarChart3 className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Analítica Avanzada</h3>
               <p className="text-slate-600">
@@ -97,7 +97,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
 
             <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
-                <Shield className="w-8 h-8 text-black" />
+                <Shield className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Seguridad Mejorada</h3>
               <p className="text-slate-600">
@@ -123,15 +123,15 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
               </p>
               <ul className="space-y-4 text-lg text-slate-600">
                 <li className="flex items-start">
-                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-blue-600 flex-shrink-0" />
                   <span>Reduce costos de combustible hasta un 30%</span>
                 </li>
                 <li className="flex items-start">
-                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-blue-600 flex-shrink-0" />
                   <span>Mejora la seguridad y responsabilidad del conductor</span>
                 </li>
                 <li className="flex items-start">
-                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-blue-600 flex-shrink-0" />
                   <span>Aumenta la satisfacción del cliente con tiempos estimados precisos</span>
                 </li>
               </ul>

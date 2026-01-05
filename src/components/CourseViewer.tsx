@@ -142,7 +142,7 @@ export default function CourseViewer({ courseId, enrollmentId, onBack }: CourseV
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-rose-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-slate-600">Cargando curso...</p>
         </div>
       </div>
@@ -197,7 +197,7 @@ export default function CourseViewer({ courseId, enrollmentId, onBack }: CourseV
                   {!isLessonCompleted(selectedLesson.id) && (
                     <button
                       onClick={() => markLessonComplete(selectedLesson.id)}
-                      className="px-6 py-3 bg-rose-600 text-white font-medium rounded-lg hover:bg-rose-700 transition-colors"
+                      className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
                     >
                       Marcar como Completado
                     </button>
@@ -221,7 +221,7 @@ export default function CourseViewer({ courseId, enrollmentId, onBack }: CourseV
                     onClick={() => setSelectedLesson(lesson)}
                     className={`w-full text-left p-4 rounded-lg transition-colors ${
                       selectedLesson?.id === lesson.id
-                        ? 'bg-rose-50 border-2 border-rose-600'
+                        ? 'bg-blue-50 border-2 border-blue-600'
                         : 'bg-slate-50 hover:bg-slate-100 border-2 border-transparent'
                     }`}
                   >
