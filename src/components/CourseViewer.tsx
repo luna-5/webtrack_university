@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft, CheckCircle, Circle, Clock, Play } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
+import { parseVideoUrl } from '../utils/videoUrlParser';
 
 interface Course {
   id: string;
@@ -29,37 +30,6 @@ interface CourseViewerProps {
   enrollmentId: string;
   onBack: () => void;
 }
-
-const getYouTubeEmbedUrl = (url: string): string => {
-  if (!url) return '';
-
-  let videoId = '';
-
-  if (url.includes('youtube.com/embed/')) {
-    return url;
-  }
-
-  const watchMatch = url.match(/youtube\.com\/watch\?v=([^&]+)/);
-  if (watchMatch) {
-    videoId = watchMatch[1];
-  }
-
-  const shortMatch = url.match(/youtu\.be\/([^?&]+)/);
-  if (shortMatch) {
-    videoId = shortMatch[1];
-  }
-
-  const embedMatch = url.match(/youtube\.com\/embed\/([^?&]+)/);
-  if (embedMatch) {
-    videoId = embedMatch[1];
-  }
-
-  if (videoId) {
-    return `https://www.youtube.com/embed/${videoId}`;
-  }
-
-  return url;
-};
 
 export default function CourseViewer({ courseId, enrollmentId, onBack }: CourseViewerProps) {
   const { user } = useAuth();
@@ -176,13 +146,42 @@ export default function CourseViewer({ courseId, enrollmentId, onBack }: CourseV
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
                 <div className="aspect-video bg-slate-900">
                   {selectedLesson.video_url ? (
-                    <iframe
-                      src={getYouTubeEmbedUrl(selectedLesson.video_url)}
-                      title={selectedLesson.title}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
+                    (() => {
+                      const { embedUrl, type } = parseVideoUrl(selectedLesson.video_url);
+
+                      if (type === 'direct') {
+                        return (
+                          <video
+                            src={embedUrl}
+                            controls
+                            className="w-full h-full"
+                          >
+                            Tu navegador no soporta el elemento de video.
+                          </video>
+                        );
+                      }
+
+                      if (embedUrl) {
+                        return (
+                          <iframe
+                            src={embedUrl}
+                            title={selectedLesson.title}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        );
+                      }
+
+                      return (
+                        <div className="w-full h-full flex items-center justify-center text-white">
+                          <div className="text-center">
+                            <Play className="w-16 h-16 mx-auto mb-2" />
+                            <p className="text-sm">URL de video no válida</p>
+                          </div>
+                        </div>
+                      );
+                    })()
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-white">
                       <Play className="w-16 h-16" />

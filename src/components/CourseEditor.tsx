@@ -649,11 +649,11 @@ export default function CourseEditor({ courseId, onBack }: CourseEditorProps) {
                   value={editingLesson.video_url}
                   onChange={(e) => setEditingLesson({ ...editingLesson, video_url: e.target.value })}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-                  placeholder='Ej: https://youtube.com/watch?v=... o <iframe src="..."></iframe>'
+                  placeholder='Ej: https://youtube.com/watch?v=... o https://drive.google.com/file/d/...'
                   rows={3}
                 />
                 <p className="mt-2 text-xs text-slate-500">
-                  Puedes pegar una URL de YouTube, Vimeo, o el código embebido completo del video
+                  Soporta: YouTube, Google Drive, Vimeo, o el código embebido completo del video
                 </p>
               </div>
 
