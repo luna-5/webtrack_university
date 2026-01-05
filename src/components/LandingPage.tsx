@@ -14,7 +14,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
             <div className="flex items-center space-x-3">
               <img
                 src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
-                alt="WebTrack GPS Logo"
+                alt="WebTrack Logo"
                 className="h-12 w-auto"
               />
             </div>
@@ -44,7 +44,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
                 Soluciones Completas de Gestión de Flotas
               </h1>
               <p className="text-xl text-slate-600 mb-8">
-                Rastrea, gestiona y optimiza toda tu flota en tiempo real. WebTrack GPS proporciona
+                Rastrea, gestiona y optimiza toda tu flota en tiempo real. WebTrack proporciona
                 a las empresas de transporte herramientas poderosas para monitorear vehículos, reducir costos
                 y mejorar la eficiencia operativa.
               </p>
@@ -68,7 +68,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">¿Por Qué Elegir WebTrack GPS?</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">¿Por Qué Elegir WebTrack?</h2>
             <p className="text-xl text-slate-600">Funcionalidades poderosas diseñadas para empresas de transporte modernas</p>
           </div>
 
@@ -144,7 +144,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">¿Listo para Transformar tu Flota?</h2>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            Únete a cientos de empresas de transporte que usan WebTrack GPS para optimizar operaciones
+            Únete a cientos de empresas de transporte que usan WebTrack para optimizar operaciones
             y maximizar la eficiencia.
           </p>
           <button
@@ -162,7 +162,7 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
           <div className="flex items-center justify-center space-x-2 mb-4">
             <img
               src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
-              alt="WebTrack GPS Logo"
+              alt="WebTrack Logo"
               className="h-8 w-auto brightness-0 invert"
             />
           </div>
