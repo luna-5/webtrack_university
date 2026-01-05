@@ -1,4 +1,4 @@
-import { BookOpen, Users, ArrowRight, Heart } from 'lucide-react';
+import { Truck, MapPin, ArrowRight, Shield, BarChart3, Clock } from 'lucide-react';
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -7,62 +7,103 @@ interface LandingPageProps {
 
 export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps) {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f1eee3' }}>
-      <nav className="sticky top-0 z-50 border-b border-slate-200 shadow-sm" style={{ backgroundColor: '#f1eee3' }}>
+    <div className="min-h-screen bg-white">
+      <nav className="sticky top-0 z-50 border-b border-slate-200 shadow-sm bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <img
-                src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/8c104b01-51bf-49d3-a6ea-ee71a69358ae/other/1763877410260-ekarr7.png"
-                alt="Logo"
+                src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
+                alt="WebTrack GPS Logo"
                 className="h-12 w-auto"
               />
             </div>
             <div className="flex items-center space-x-4">
               <button
                 onClick={onSignUp}
-                className="px-4 py-2 text-sm font-bold text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors"
+                className="px-6 py-2 text-sm font-bold text-white bg-black rounded-lg hover:bg-slate-800 transition-colors"
               >
-                Inscríbete HOY
+                Start Free Trial
               </button>
               <button
                 onClick={onGetStarted}
                 className="px-4 py-2 text-sm font-medium text-slate-900 hover:text-slate-700 transition-colors"
               >
-                Iniciar Sesión
+                Sign In
               </button>
             </div>
           </div>
         </div>
       </nav>
 
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <img
-                src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/6b6dffa1-3565-43e1-81c7-248b3fb35a8c/other/1763989359249-0ifyjx.png"
-                alt="Descubre la Belleza del Amor y la Dignidad Humana"
-                className="w-full mb-6"
-              />
+              <h1 className="text-5xl font-bold text-slate-900 mb-6">
+                Complete Fleet Management Solutions
+              </h1>
               <p className="text-xl text-slate-600 mb-8">
-                Explora las profundas enseñanzas de San Juan Pablo II sobre el significado del cuerpo,
-                el amor y lo que significa ser humano a través de nuestros cursos en línea.
+                Track, manage, and optimize your entire fleet in real-time. WebTrack GPS provides
+                transport companies with powerful tools to monitor vehicles, reduce costs, and
+                improve operational efficiency.
               </p>
               <button
                 onClick={onSignUp}
-                className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-black rounded-lg hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl"
               >
-                Comienza a Aprender Hoy
+                Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </div>
             <div className="relative">
-              <img
-                src="https://polishheritagecentertx.org/sites/default/files/styles/max_1300x1300/public/2021-03/00870_AOSTA1991.jpg?itok=9vt-Auu3"
-                alt="Pope John Paul II"
-                className="rounded-2xl shadow-2xl w-full"
-              />
+              <div className="rounded-2xl shadow-2xl bg-slate-100 p-8">
+                <Truck className="w-full h-64 text-slate-700" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose WebTrack GPS?</h2>
+            <p className="text-xl text-slate-600">Powerful features designed for modern transport companies</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
+                <MapPin className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Real-Time Tracking</h3>
+              <p className="text-slate-600">
+                Monitor your entire fleet in real-time with accurate GPS tracking. Know exactly
+                where each vehicle is at any moment.
+              </p>
+            </div>
+
+            <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
+                <BarChart3 className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Advanced Analytics</h3>
+              <p className="text-slate-600">
+                Get detailed reports and insights on fuel consumption, driver behavior,
+                route optimization, and more.
+              </p>
+            </div>
+
+            <div className="text-center p-8 rounded-xl bg-white hover:shadow-lg transition-shadow">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-6">
+                <Shield className="w-8 h-8 text-black" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Enhanced Security</h3>
+              <p className="text-slate-600">
+                Protect your assets with geofencing, alerts, and comprehensive security
+                features to prevent theft and misuse.
+              </p>
             </div>
           </div>
         </div>
@@ -70,43 +111,30 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">¿Por Qué Estudiar la Teología del Cuerpo?</h2>
-            <p className="text-xl text-slate-600">Transforma tu comprensión del amor, las relaciones y la dignidad humana</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full mb-6">
-                <BookOpen className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Currículo Integral</h3>
-              <p className="text-slate-600">
-                Sumérgete en las enseñanzas completas con lecciones estructuradas diseñadas para
-                un aprendizaje progresivo desde nivel principiante hasta avanzado.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="rounded-2xl shadow-2xl bg-slate-100 p-8">
+              <Clock className="w-full h-64 text-slate-700" />
             </div>
-
-            <div className="text-center p-8 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full mb-6">
-                <Users className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Instructores Expertos</h3>
-              <p className="text-slate-600">
-                Aprende de teólogos y académicos que han dedicado sus vidas a
-                comprender y enseñar estas profundas verdades.
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Optimize Your Operations</h2>
+              <p className="text-xl text-slate-600 mb-6">
+                Save time and reduce costs with intelligent route planning, automated reporting,
+                and maintenance scheduling.
               </p>
-            </div>
-
-            <div className="text-center p-8 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full mb-6">
-                <Heart className="w-8 h-8 text-rose-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">Sabiduría Transformadora</h3>
-              <p className="text-slate-600">
-                Aplica principios eternos a las relaciones modernas, preparación matrimonial
-                y crecimiento espiritual personal.
-              </p>
+              <ul className="space-y-4 text-lg text-slate-600">
+                <li className="flex items-start">
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <span>Reduce fuel costs by up to 30%</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <span>Improve driver safety and accountability</span>
+                </li>
+                <li className="flex items-start">
+                  <ArrowRight className="w-6 h-6 mr-3 mt-1 text-black flex-shrink-0" />
+                  <span>Increase customer satisfaction with accurate ETAs</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -114,15 +142,16 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
 
       <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6">¿Listo para Comenzar tu Viaje?</h2>
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">Ready to Transform Your Fleet?</h2>
           <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-            Únete a miles de estudiantes explorando la profunda belleza del amor auténtico y la dignidad humana.
+            Join hundreds of transport companies using WebTrack GPS to streamline operations
+            and maximize efficiency.
           </p>
           <button
             onClick={onSignUp}
-            className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 text-lg font-medium text-white bg-black rounded-lg hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl"
           >
-            Comenzar Ahora
+            Start Your Free Trial
             <ArrowRight className="ml-2 w-5 h-5" />
           </button>
         </div>
@@ -132,13 +161,13 @@ export default function LandingPage({ onGetStarted, onSignUp }: LandingPageProps
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <img
-              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/8c104b01-51bf-49d3-a6ea-ee71a69358ae/other/1763877410260-ekarr7.png"
-              alt="Logo"
-              className="h-8 w-auto"
+              src="https://dqygnmjwprmoipcyhzzn.supabase.co/storage/v1/object/public/multimedia/1f694ce8-dec9-43cb-bc15-0bf8a018fe7f/logo/1767629183022-7xqmg.svg"
+              alt="WebTrack GPS Logo"
+              className="h-8 w-auto brightness-0 invert"
             />
           </div>
           <p className="text-slate-400">
-            Inspirado por las enseñanzas de San Juan Pablo II
+            Professional fleet management solutions for transport companies
           </p>
         </div>
       </footer>
